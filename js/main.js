@@ -22,21 +22,47 @@ getFetch()
 
 //get date and time
 
-let date = new Date()
+// let date = new Date()
 
-let day = date.getDate()
-let month = date.getMonth() + 1
-let year = date.getFullYear()
+// let day = date.getDate()
+// let month = date.getMonth() + 1
+// let year = date.getFullYear()
 
-let currentDate = `${month}-${day}-${year}`
-let localTime = new Date().toString().slice(16,21)
-console.log(localTime)
+// let currentDate = `${month}-${day}-${year}`
+// let localTime = new Date().toString().slice(16,21)
+// console.log(localTime)
 
-console.log(date)
+// console.log(date)
 
-const currentTime = document.getElementById('currentTime')
+// const currentTime = document.getElementById('currentTime')
 
-  currentTime.textContent = localTime
+//   currentTime.textContent = localTime
+
+class CurrentDateTime {
+    constructor(){
+        this.date = new Date()
+        this.day = this.date.getDate()
+        this.month = this.date.getMonth()+1
+        this.year = this.date.getFullYear()
+    }
+
+    getCurrentDate(){
+        return `${this.month}-${this.day}-${this.year}`
+    }
+
+    getLocalTime(){
+        return this.date.toString().slice(16, 21)
+    }
+
+    displayLocalTime(){
+        const localTime = document.getElementById('localTime')
+        localTime.textContent = this.getLocalTime()
+    }
+}
+
+const currentDateTime = new CurrentDateTime()
+
+currentDateTime.displayLocalTime()
 
 //get current hour and set morning/afternoon/evening/night
 
