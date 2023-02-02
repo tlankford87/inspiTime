@@ -44,6 +44,8 @@ class CurrentDateTime {
         this.day = this.date.getDate()
         this.month = this.date.getMonth()+1
         this.year = this.date.getFullYear()
+        this.hour = this.date.getHours()
+        this.minutes = this.date.getMinutes()
     }
 
     getCurrentDate(){
@@ -51,7 +53,10 @@ class CurrentDateTime {
     }
 
     getLocalTime(){
-        return this.date.toString().slice(16, 21)
+        let hours = this.hour
+        let minutes = this.minutes
+        hours = (hours % 12 || 12)
+        return `${hours}:${minutes}`
     }
 
     displayLocalTime(){
