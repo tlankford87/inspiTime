@@ -15,7 +15,7 @@ body{
 main {
     width: 100vw;
     height: 100vh;
-    padding: 2rem;
+    /* padding: 2rem; */
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-weight: bold;
@@ -24,10 +24,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 #quote{
     flex-basis: 60%;
+    padding: 2rem;
 }
 
 #quoteParagraph{
@@ -37,6 +39,10 @@ main {
 #quoteAuthor{
     font-size: 2rem;
     padding-top: 2rem;
+}
+
+#timeAndLocation{
+    padding: 2rem;
 }
 
 #morningOrNight{
@@ -72,6 +78,24 @@ main {
     text-align: center;
     font-size: 2rem;
     border-radius: 2rem;
+}
+
+#moreInfo{
+    transform: translateY(200%);
+    position: absolute;
+    transition: all .3s ease-out;
+    background: rgb(205, 216, 216);
+    height: 50vh;
+    width: 100vw;
+    margin: 0;
+}
+
+#close{
+    width: 5rem;
+    height: 1.5rem;
+    padding: 1rem;
+    background: blue;
+    margin: 2rem;
 }
 
 /* 

@@ -9,7 +9,7 @@ function getFetch(){
         .then(data => {
           console.log(data)
           const quoteParagraph = document.getElementById('quoteParagraph')
-          quoteParagraph.textContent = data.quote
+          quoteParagraph.textContent = `"${data.quote}"`
           const quoteAuthor = document.getElementById('quoteAuthor')
           quoteAuthor.textContent = `-${data.author}`
         })
@@ -21,22 +21,6 @@ function getFetch(){
 getFetch()
 
 //get date and time
-
-// let date = new Date()
-
-// let day = date.getDate()
-// let month = date.getMonth() + 1
-// let year = date.getFullYear()
-
-// let currentDate = `${month}-${day}-${year}`
-// let localTime = new Date().toString().slice(16,21)
-// console.log(localTime)
-
-// console.log(date)
-
-// const currentTime = document.getElementById('currentTime')
-
-//   currentTime.textContent = localTime
 
 class CurrentDateTime {
     constructor(){
@@ -94,3 +78,19 @@ function morningOrNight(){
 }
 
 morningOrNight()
+
+//more info button
+
+document.getElementById('button').addEventListener('click', moreInfo)
+
+function moreInfo(){
+    const moreInfo = document.getElementById('moreInfo')
+    moreInfo.style.transform = 'translateY(125%)'
+}
+
+document.getElementById('close').addEventListener('click', closeMoreInfo)
+
+function closeMoreInfo(){
+    const moreInfo = document.getElementById('moreInfo')
+    moreInfo.style.transform = 'translateY(200%)'
+}
