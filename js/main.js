@@ -54,7 +54,7 @@ class CurrentDateTime {
 
     getLocalTime(){
         let hours = this.hour
-        let minutes = this.minutes
+        let minutes = this.minutes < 10 ? `0${this.minutes}` : this.minutes
         hours = (hours % 12 || 12)
         return `${hours}:${minutes}`
     }
@@ -62,8 +62,16 @@ class CurrentDateTime {
     displayLocalTime(){
         const localTime = document.getElementById('localTime')
         localTime.textContent = this.getLocalTime()
+        const amOrPm = document.getElementById('amOrPm')
+        if(this.hour < 12){
+            amOrPm.textContent = 'AM'
+        }else{
+            amOrPm.textContent = 'PM'
+        }
+        console.log(this.minutes)
     }
-}
+    }
+
 
 const currentDateTime = new CurrentDateTime()
 
