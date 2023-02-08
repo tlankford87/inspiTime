@@ -25,6 +25,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    overflow: hidden;
 }
 
 #quote{
@@ -78,24 +79,28 @@ main {
     text-align: center;
     font-size: 2rem;
     border-radius: 2rem;
+    margin: 0 0 4rem 2rem;
 }
 
 #moreInfo{
     transform: translateY(200%);
     position: absolute;
     transition: all .3s ease-out;
-    background: rgb(205, 216, 216);
+    background: rgb(119, 128, 128);
     height: 50vh;
     width: 100vw;
     margin: 0;
 }
 
 #close{
-    width: 5rem;
+    width: 10rem;
     height: 1.5rem;
     padding: 1rem;
-    background: blue;
+    background: rgb(119, 128, 128);
     margin: 2rem;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 2rem;
+    text-align: center;
 }
 
 /* 
