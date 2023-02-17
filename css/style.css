@@ -84,6 +84,7 @@ main {
     border-radius: 2rem;
     height: 3rem;
     width: 20vw;
+    margin: 0 0 2rem 2rem;
 }
 
 #moreInfo{

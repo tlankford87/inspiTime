@@ -65,15 +65,24 @@ currentDateTime.displayLocalTime()
 
 function morningOrNight(){
     const morningOrNight = document.getElementById('morningOrNight')
+    const body = document.getElementById('body')
     let now = new Date().getHours()
     if(now > 5 && now <= 12){
         morningOrNight.textContent = "Good Morning. It's Currently:"
+        body.style.background = 'linear-gradient(to right, rgba(0, 0, 0, 0.3) 0 100%), url(../img/morningBG.jpg)'
+        body.style.backgroundSize = 'cover'
     }else if(now > 12 && now <= 18){
         morningOrNight.textContent = "Good Afternoon. It's Currently:"
+        body.style.background = 'linear-gradient(to right, rgba(0, 0, 0, 0.3) 0 100%), url(../img/daytimeBG.jpg)'
+        body.style.backgroundSize = 'cover'
     }else if(now > 18 && now <= 22){
         morningOrNight.textContent = "Good Evening. It's Currently:"
+        body.style.background = 'linear-gradient(to right, rgba(0, 0, 0, 0.3) 0 100%), url(../img/eveningBG.jpg)'
+        body.style.backgroundSize = 'cover'
     }else if(now > 22 || now >= 0 && now <= 5){
         morningOrNight.textContent = "Good Night. It's Currently:"
+        body.style.background = 'linear-gradient(to right, rgba(0, 0, 0, 0.3) 0 100%), url(../img/nighttimeBG.jpg)'
+        body.style.backgroundSize = 'cover'
     }
 }
 
