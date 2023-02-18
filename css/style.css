@@ -70,6 +70,8 @@ main {
 
 #moreButton{
     width: 100vw;
+    display: flex;
+    flex-direction: row;
 }
 
 #button{
@@ -80,7 +82,6 @@ main {
     text-align: center;
     font-size: 2rem;
     border-radius: 2rem;
-    margin: 0 0 4rem 2rem;
     height: 3rem;
     width: 20vw;
 }
@@ -141,20 +142,25 @@ main {
     }
 
     #moreButton{
-        display: flex;
-        flex-direction: row;
         justify-content: flex-end;
-        margin-right: 2rem;
+        padding: 2rem;
         width: 100vw;
+        margin-bottom: 4rem;
     }
 
-    #Button{
-        width: 60vw;
+    #button{
+        width: 40vw;
         height: 5rem;
         font-size: 4rem;
-        margin-right: 2rem;
     }
 }
+
+@media (min-width: 1500px){
+    #quote, #quoteParagraph, #quoteAuthor, #timeAndLocation, #morningOrNight, #localTime, #amOrPm, #moreButton{
+        padding: 2rem 4rem 2rem 4rem;
+    }
+}
+
 
 /* 
 font-family: 'Oswald', sans-serif;
