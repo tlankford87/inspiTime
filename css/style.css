@@ -15,7 +15,6 @@ body{
 main {
     width: 100vw;
     height: 100vh;
-    /* padding: 2rem; */
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-weight: bold;
@@ -70,16 +69,20 @@ main {
 }
 
 #moreButton{
+    width: 100vw;
+}
+
+#button{
     display: grid;
     place-items: center;
-    height: 3rem;
-    width: 20vw;
     background: rgb(205, 216, 216);
     color:rgb(110, 108, 108);
     text-align: center;
     font-size: 2rem;
     border-radius: 2rem;
     margin: 0 0 4rem 2rem;
+    height: 3rem;
+    width: 20vw;
 }
 
 #moreInfo{
@@ -135,6 +138,21 @@ main {
 
     #amOrPm{
         font-size: 4rem;
+    }
+
+    #moreButton{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 2rem;
+        width: 100vw;
+    }
+
+    #Button{
+        width: 60vw;
+        height: 5rem;
+        font-size: 4rem;
+        margin-right: 2rem;
     }
 }
 
