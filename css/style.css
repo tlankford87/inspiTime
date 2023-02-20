@@ -90,17 +90,52 @@ main {
     height: 50vh;
     width: 100vw;
     margin: 0;
+    padding: 2rem 0 0 0;
 }
 
 #close{
     width: 10rem;
     height: 1.5rem;
-    padding: 1rem;
+    /* padding: 1rem; */
     background: rgb(119, 128, 128);
     margin: 2rem;
-    border-radius: 1rem 1rem 0 0;
+    /* border-radius: 1rem 1rem 0 0; */
     font-size: 2rem;
     text-align: center;
+}
+
+/* media queries */
+
+@media (min-width: 800px){
+    #quote{
+        width: 80vw;
+    }
+
+    #quoteParagraph{
+        font-size: 5.6rem;
+    }
+
+    #quoteAuthor{
+        font-size: 4rem;
+    }
+
+    #timeAndLocation{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    #morningOrNight{
+        font-size: 4rem;
+    }
+
+    #localTime{
+        font-size: 24rem;
+    }
+
+    #amOrPm{
+        font-size: 4rem;
+    }
 }
 
 /* 
